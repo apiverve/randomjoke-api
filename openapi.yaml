@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Random Joke
-  description: Random Joke is a simple tool for getting random jokes. It returns a random joke from a collection of jokes.
+  description: >-
+    Random Joke is a simple tool for getting random jokes. It returns a random
+    joke from a collection of jokes.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/randomjoke:
     get:
       summary: Get Random Joke
-      description: Random Joke is a simple tool for getting random jokes. It returns a random joke from a collection of jokes.
+      description: Get a random joke from a collection of jokes
       operationId: randomjoke
       parameters: []
       responses:
@@ -35,21 +37,23 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  score: 1
-                  setup: A black guy in a library asked me where the colored printer was
-                  punchline: "I replied: 'Go use the one in the back you nigger'"
+                  score: 7
+                  setup: >-
+                    Why is the space between a woman's chest and her hips called
+                    a waist?
+                  punchline: Because you could easily fit another pair of tits in there.
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -57,4 +61,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
