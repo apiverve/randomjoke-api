@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/randomjoke",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Random Joke is a simple tool for getting random jokes. It returns a random joke from a collection of jokes.",
   "main": "index.js",
   "types": "index.d.ts",
