@@ -116,9 +116,9 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "score": 1,
-    "setup": "A black guy in a library asked me where the colored printer was",
-    "punchline": "I replied: 'Go use the one in the back you nigger'"
+    "score": 7,
+    "setup": "Why is the space between a woman's chest and her hips called a waist?",
+    "punchline": "Because you could easily fit another pair of tits in there."
   }
 }
 ```
