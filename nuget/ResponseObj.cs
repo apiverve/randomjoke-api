@@ -25,17 +25,32 @@ namespace APIVerve.API.RandomJoke
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("score")]
-        public long Score { get; set; }
+        public long? Score { get; set; }
 
         [JsonProperty("setup")]
         public string Setup { get; set; }
 
         [JsonProperty("punchline")]
         public string Punchline { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
