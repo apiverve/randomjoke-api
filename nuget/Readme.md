@@ -51,7 +51,7 @@ Here's a simple example to get you started quickly:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.RandomJoke;
 
 class Program
 {
@@ -114,7 +114,7 @@ The modern async/await pattern provides the best performance and code readabilit
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.RandomJoke;
 
 public class Example
 {
@@ -144,7 +144,7 @@ If you need to use synchronous code, you can use the `Execute` method:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.RandomJoke;
 
 public class Example
 {
@@ -179,7 +179,7 @@ The API client provides comprehensive error handling. Here are some examples:
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.RandomJoke;
 
 public class Example
 {
@@ -229,7 +229,7 @@ public class Example
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.RandomJoke;
 
 public class Example
 {
@@ -349,9 +349,9 @@ using (var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]"))
   "status": "ok",
   "error": null,
   "data": {
-    "score": 1,
-    "setup": "A black guy in a library asked me where the colored printer was",
-    "punchline": "I replied: 'Go use the one in the back you nigger'"
+    "score": 7,
+    "setup": "Why is the space between a woman's chest and her hips called a waist?",
+    "punchline": "Because you could easily fit another pair of tits in there."
   }
 }
 ```
