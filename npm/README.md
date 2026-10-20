@@ -1,13 +1,10 @@
 # Random Joke API
 
-Random Joke is a simple tool for getting random jokes. It returns a random joke from a collection of jokes.
+Random Joke fetches two-part jokes with separated setups and punchlines for applications and bots. Paid plans add a joke rating score to evaluate humor.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/randomjoke.svg)](https://www.npmjs.com/package/@apiverve/randomjoke)
 
-This is a Javascript Wrapper for the [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source=npm&utm_medium=readme)
+This is a JavaScript wrapper for the [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -28,15 +25,15 @@ yarn add @apiverve/randomjoke
 ## Configuration
 
 Before using the Random Joke API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
 ## Quick Start
 
-[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=referral&utm_content=readme)
 
-The Random Joke API documentation is found here: [https://docs.apiverve.com/ref/randomjoke](https://docs.apiverve.com/ref/randomjoke?utm_source=npm&utm_medium=readme).
+The Random Joke API documentation is found here: [https://docs.apiverve.com/ref/randomjoke](https://docs.apiverve.com/ref/randomjoke?utm_source=npm&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -127,7 +124,7 @@ async function makeRequest() {
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -139,12 +136,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=npm&utm_medium=readme).
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=referral&utm_content=readme) and [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

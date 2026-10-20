@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/randomjoke",
-  "version": "1.2.0",
-  "description": "Random Joke is a simple tool for getting random jokes. It returns a random joke from a collection of jokes.",
+  "version": "1.2.2",
+  "description": "Random Joke fetches two-part jokes with separated setups and punchlines for applications and bots. Paid plans add a joke rating score to evaluate humor.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "random joke", "random joke api", "random joke tool", "random joke software", "random joke service"
+    "random joke api", "random jokes", "joke generator", "setup and punchline jokes", "fetch random joke"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/randomjoke-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/randomjoke?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/randomjoke?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
