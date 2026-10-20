@@ -2,8 +2,8 @@ openapi: 3.0.4
 info:
   title: Random Joke
   description: >-
-    Random Joke is a simple tool for getting random jokes. It returns a random
-    joke from a collection of jokes.
+    Random Joke fetches two-part jokes with separated setups and punchlines for
+    applications and bots. Paid plans add a joke rating score to evaluate humor.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/randomjoke:
     get:
-      summary: Get Random Joke
+      summary: Random Joke
       description: Get a random joke from a collection of jokes
       operationId: randomjoke
       parameters: []

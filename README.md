@@ -1,13 +1,13 @@
-# [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Random Joke is a simple tool for getting random jokes. It returns a random joke from a collection of jokes.
+Random Joke fetches two-part jokes with separated setups and punchlines for applications and bots. Paid plans add a joke rating score to evaluate humor.
 
 The Random Joke API provides a simple, reliable way to integrate random joke functionality into your applications. Built for developers who need production-ready random joke capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -157,7 +157,7 @@ go get github.com/apiverve/randomjoke-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/randomjoke](https://docs.apiverve.com/ref/randomjoke)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -187,11 +187,30 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Random Joke API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "score": 7,
+    "setup": "Why is the space between a woman's chest and her hips called a waist?",
+    "punchline": "Because you could easily fit another pair of tits in there."
+  }
 }
 ```
 
@@ -199,7 +218,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
