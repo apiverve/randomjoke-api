@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/randomjoke",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Random Joke fetches two-part jokes with separated setups and punchlines for applications and bots. Paid plans add a joke rating score to evaluate humor.",
   "main": "index.js",
   "types": "index.d.ts",
