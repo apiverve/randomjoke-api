@@ -65,7 +65,10 @@ namespace APIVerve.API.RandomJoke
         private readonly string _method = "GET";
 
         /// <summary>Validation rules for parameters</summary>
-        private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>();
+        private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
+        {
+            { "safe", new ValidationRule { Type = "boolean", Required = false } }
+        };
 
         /// <summary>Format validation patterns</summary>
         private static readonly Dictionary<string, System.Text.RegularExpressions.Regex> _formatPatterns = new Dictionary<string, System.Text.RegularExpressions.Regex>

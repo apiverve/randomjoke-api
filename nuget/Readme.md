@@ -59,12 +59,14 @@ class Program
         // Initialize the API client
         var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]");
 
-        // This API does not require a Query
+        var queryOptions = new RandomJokeQueryOptions {
+            Safe = true
+        };
 
         // Make the API call
         try
         {
-            var response = await apiClient.ExecuteAsync();
+            var response = await apiClient.ExecuteAsync(queryOptions);
 
             if (response.Error != null)
             {
@@ -121,9 +123,11 @@ public class Example
     {
         var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]");
 
-        // This API does not require a Query
+        var queryOptions = new RandomJokeQueryOptions {
+            Safe = true
+        };
 
-        var response = await apiClient.ExecuteAsync();
+        var response = await apiClient.ExecuteAsync(queryOptions);
 
         if (response.Error != null)
         {
@@ -151,9 +155,11 @@ public class Example
     {
         var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]");
 
-        // This API does not require a Query
+        var queryOptions = new RandomJokeQueryOptions {
+            Safe = true
+        };
 
-        var response = apiClient.Execute();
+        var response = apiClient.Execute(queryOptions);
 
         if (response.Error != null)
         {
@@ -186,11 +192,13 @@ public class Example
     {
         var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]");
 
-        // This API does not require a Query
+        var queryOptions = new RandomJokeQueryOptions {
+            Safe = true
+        };
 
         try
         {
-            var response = await apiClient.ExecuteAsync();
+            var response = await apiClient.ExecuteAsync(queryOptions);
 
             // Check for API-level errors
             if (response.Error != null)
@@ -240,11 +248,13 @@ public class Example
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        // This API does not require a Query
+        var queryOptions = new RandomJokeQueryOptions {
+            Safe = true
+        };
 
         try
         {
-            var response = await apiClient.ExecuteAsync();
+            var response = await apiClient.ExecuteAsync(queryOptions);
 
             if (response.Error != null)
             {
@@ -279,9 +289,11 @@ var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]");
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-// This API does not require a Query
+var queryOptions = new RandomJokeQueryOptions {
+    Safe = true
+};
 
-var response = await apiClient.ExecuteAsync();
+var response = await apiClient.ExecuteAsync(queryOptions);
 
 // Remove a header
 apiClient.RemoveCustomHeader("X-Custom-Header");
@@ -303,9 +315,11 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-// This API does not require a Query
+var queryOptions = new RandomJokeQueryOptions {
+    Safe = true
+};
 
-var response = await apiClient.ExecuteAsync();
+var response = await apiClient.ExecuteAsync(queryOptions);
 ```
 
 ### Retry Configuration
@@ -319,9 +333,11 @@ var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]");
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-// This API does not require a Query
+var queryOptions = new RandomJokeQueryOptions {
+    Safe = true
+};
 
-var response = await apiClient.ExecuteAsync();
+var response = await apiClient.ExecuteAsync(queryOptions);
 ```
 
 ### Dispose Pattern
@@ -329,11 +345,13 @@ var response = await apiClient.ExecuteAsync();
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-// This API does not require a Query
+var queryOptions = new RandomJokeQueryOptions {
+    Safe = true
+};
 
 using (var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]"))
 {
-    var response = await apiClient.ExecuteAsync();
+    var response = await apiClient.ExecuteAsync(queryOptions);
     Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented));
 }
 // HttpClient is automatically disposed here
@@ -348,9 +366,9 @@ using (var apiClient = new RandomJokeAPIClient("[YOUR_API_KEY]"))
   "status": "ok",
   "error": null,
   "data": {
-    "score": 7,
-    "setup": "Why is the space between a woman's chest and her hips called a waist?",
-    "punchline": "Because you could easily fit another pair of tits in there."
+    "score": 9,
+    "setup": "Why did the stonemason break up with the female con artist?",
+    "punchline": "She took him for granite."
   }
 }
 ```
