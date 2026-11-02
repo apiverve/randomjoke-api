@@ -17,11 +17,14 @@ def call_randomjoke_api():
     Make a GET request to the Random Joke API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;safe&#x27;: true}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()

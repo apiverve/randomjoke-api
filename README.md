@@ -30,7 +30,11 @@ The Random Joke API provides a simple, reliable way to integrate random joke fun
 ```javascript
 async function callRandomJokeAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/randomjoke', {
+        const params = new URLSearchParams({
+            safe: true
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/randomjoke?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +54,7 @@ callRandomJokeAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/randomjoke" \
+curl -X GET "https://api.apiverve.com/v1/randomjoke?safe=true" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -207,9 +211,9 @@ A real response from the Random Joke API:
   "status": "ok",
   "error": null,
   "data": {
-    "score": 7,
-    "setup": "Why is the space between a woman's chest and her hips called a waist?",
-    "punchline": "Because you could easily fit another pair of tits in there."
+    "score": 9,
+    "setup": "Why did the stonemason break up with the female con artist?",
+    "punchline": "She took him for granite."
   }
 }
 ```
