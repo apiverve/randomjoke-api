@@ -23,7 +23,9 @@ class ValidationError(RandomjokeAPIClientError):
 
 class RandomjokeAPIClient:
     # Validation rules for parameters (generated from schema)
-    VALIDATION_RULES = {}
+    VALIDATION_RULES = {
+        "safe": {"type": "boolean", "required": False, "default": True}
+    }
 
     # Format validation patterns
     FORMAT_PATTERNS = {

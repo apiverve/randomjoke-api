@@ -43,11 +43,11 @@ from apiverve_randomjoke.apiClient import RandomjokeAPIClient
 # Initialize the client with your APIVerve API key
 api = RandomjokeAPIClient("[YOUR_API_KEY]")
 
-# This API does not require a Query
+query = { "safe": true }
 
 try:
     # Make the API call
-    result = api.execute()
+    result = api.execute(query)
 
     # Print the result
     print(result)
@@ -81,14 +81,14 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-# This API does not require a Query
+query = { "safe": true }
 ```
 
 ###### Simple Request
 
 ```python
 # Make a request to the API
-result = api.execute()
+result = api.execute(query)
 
 # Print the result
 print(result)
@@ -101,9 +101,9 @@ print(result)
   "status": "ok",
   "error": null,
   "data": {
-    "score": 7,
-    "setup": "Why is the space between a woman's chest and her hips called a waist?",
-    "punchline": "Because you could easily fit another pair of tits in there."
+    "score": 9,
+    "setup": "Why did the stonemason break up with the female con artist?",
+    "punchline": "She took him for granite."
   }
 }
 ```
@@ -121,10 +121,10 @@ from apiverve_randomjoke.apiClient import RandomjokeAPIClient, RandomjokeAPIClie
 
 api = RandomjokeAPIClient("[YOUR_API_KEY]")
 
-# This API does not require a Query
+query = { "safe": true }
 
 try:
-    result = api.execute()
+    result = api.execute(query)
     print("Success!")
     print(result)
 except RandomjokeAPIClientError as e:
@@ -142,10 +142,10 @@ from apiverve_randomjoke.apiClient import RandomjokeAPIClient, RandomjokeAPIClie
 
 api = RandomjokeAPIClient("[YOUR_API_KEY]")
 
-# This API does not require a Query
+query = { "safe": true }
 
 try:
-    result = api.execute()
+    result = api.execute(query)
 
     # Check for successful response
     if result.get('status') == 'success':
@@ -176,12 +176,12 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_randomjoke.apiClient import RandomjokeAPIClient, RandomjokeAPIClientError
 
-# This API does not require a Query
+query = { "safe": true }
 
 # Using context manager ensures proper cleanup
 with RandomjokeAPIClient("[YOUR_API_KEY]") as api:
     try:
-        result = api.execute()
+        result = api.execute(query)
         print(result)
     except RandomjokeAPIClientError as e:
         print(f"Error: {e.message}")
@@ -202,10 +202,10 @@ from apiverve_randomjoke.apiClient import RandomjokeAPIClient
 # Enable debug mode
 api = RandomjokeAPIClient("[YOUR_API_KEY]", debug=True)
 
-# This API does not require a Query
+query = { "safe": true }
 
 # Debug information will be printed to console
-result = api.execute()
+result = api.execute(query)
 ```
 
 ### Manual Session Management
@@ -217,10 +217,10 @@ from apiverve_randomjoke.apiClient import RandomjokeAPIClient
 
 api = RandomjokeAPIClient("[YOUR_API_KEY]")
 
-# This API does not require a Query
+query = { "safe": true }
 
 try:
-    result = api.execute()
+    result = api.execute(query)
     print(result)
 finally:
     # Manually close the session when done
