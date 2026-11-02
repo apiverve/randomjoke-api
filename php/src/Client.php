@@ -15,7 +15,7 @@ use APIVerve\Randomjoke\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute([]);
+ * $response = $client->execute(['safe' => true]);
  * print_r($response);
  * ```
  *
@@ -33,7 +33,9 @@ class Client
     /**
      * Validation rules for parameters
      */
-    private const VALIDATION_RULES = [];
+    private const VALIDATION_RULES = [
+        'safe' => ['type' => 'boolean', 'required' => false]
+    ];
 
     /**
      * Format validation patterns

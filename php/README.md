@@ -27,7 +27,7 @@ use APIVerve\Randomjoke\Client;
 $client = new Client('YOUR_API_KEY');
 
 // Make a request
-$response = $client->execute();
+$response = $client->execute(['safe' => true]);
 
 // Print the response
 print_r($response);
@@ -42,7 +42,7 @@ use APIVerve\Randomjoke\Exceptions\APIException;
 use APIVerve\Randomjoke\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute([]);
+    $response = $client->execute(['safe' => true]);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -69,9 +69,9 @@ $client = new Client(
   "status": "ok",
   "error": null,
   "data": {
-    "score": 7,
-    "setup": "Why is the space between a woman's chest and her hips called a waist?",
-    "punchline": "Because you could easily fit another pair of tits in there."
+    "score": 9,
+    "setup": "Why did the stonemason break up with the female con artist?",
+    "punchline": "She took him for granite."
   }
 }
 ```
