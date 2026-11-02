@@ -35,7 +35,7 @@ require 'apiverve_randomjoke'
 client = APIVerve::Randomjoke::Client.new(api_key: "YOUR_API_KEY")
 
 # Make a request
-response = client.execute
+response = client.execute({ safe: true })
 
 # Print the response
 puts response
@@ -46,7 +46,7 @@ puts response
 
 ```ruby
 begin
-  response = client.execute({  })
+  response = client.execute({ safe: true })
   puts response["data"]
 rescue APIVerve::Randomjoke::ValidationError => e
   puts "Validation error: #{e.errors.join(', ')}"
@@ -73,9 +73,9 @@ client = APIVerve::Randomjoke::Client.new(
   "status": "ok",
   "error": null,
   "data": {
-    "score": 7,
-    "setup": "Why is the space between a woman's chest and her hips called a waist?",
-    "punchline": "Because you could easily fit another pair of tits in there."
+    "score": 9,
+    "setup": "Why did the stonemason break up with the female con artist?",
+    "punchline": "She took him for granite."
   }
 }
 ```

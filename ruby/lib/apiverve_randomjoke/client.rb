@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Randomjoke::Client.new(api_key: "your_api_key")
-    #   response = client.execute({})
+    #   response = client.execute({ safe: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/randomjoke?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = {}
+      VALIDATION_RULES = { 'safe' => { type: 'boolean', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
