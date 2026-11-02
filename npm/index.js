@@ -30,7 +30,7 @@ class randomjokeWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/randomjoke';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {};
+        this.validationRules = {"safe":{"type":"boolean","required":false,"default":true}};
     }
 
     /**

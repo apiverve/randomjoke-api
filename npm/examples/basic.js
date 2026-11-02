@@ -14,12 +14,14 @@ const api = new randomjokeAPI({
 });
 
 // Example query
-// This API does not require a Query
+var query = {
+  safe: true
+};
 
 // Make the API request using callback
 console.log('Making request to Random Joke API...\n');
 
-api.execute(function (error, data) {
+api.execute(query, function (error, data) {
     if (error) {
         console.error('Error occurred:');
         if (error.error) {

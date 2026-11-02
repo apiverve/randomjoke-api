@@ -56,9 +56,11 @@ const api = new randomjokeAPI({
 Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
 ```javascript
-// This API does not require a Query
+var query = {
+  safe: true
+};
 
-api.execute(function (error, data) {
+api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
     } else {
@@ -74,7 +76,9 @@ api.execute(function (error, data) {
 You can also use promises to make requests. The API returns a promise that you can use to handle the response.
 
 ```javascript
-// This API does not require a Query
+var query = {
+  safe: true
+};
 
 api.execute(query)
     .then(data => {
@@ -93,7 +97,9 @@ You can also use async/await to make requests. The API returns a promise that yo
 
 ```javascript
 async function makeRequest() {
-    // This API does not require a Query
+    var query = {
+  safe: true
+};
 
     try {
         const data = await api.execute(query);
@@ -113,9 +119,9 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "score": 7,
-    "setup": "Why is the space between a woman's chest and her hips called a waist?",
-    "punchline": "Because you could easily fit another pair of tits in there."
+    "score": 9,
+    "setup": "Why did the stonemason break up with the female con artist?",
+    "punchline": "She took him for granite."
   }
 }
 ```
