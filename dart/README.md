@@ -1,0 +1,77 @@
+# Random Joke API - Dart/Flutter Client
+
+Random Joke fetches two-part jokes with separated setups and punchlines for applications and bots. Paid plans add a joke rating score to evaluate humor.
+
+[![pub package](https://img.shields.io/pub/v/apiverve_randomjoke.svg)](https://pub.dev/packages/apiverve_randomjoke)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This is the Dart/Flutter client for the [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source=dart&utm_medium=referral&utm_content=readme).
+
+## Installation
+
+Add this to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  apiverve_randomjoke: ^1.2.6
+```
+
+Then run:
+
+```bash
+dart pub get
+# or for Flutter
+flutter pub get
+```
+
+## Usage
+
+```dart
+import 'package:apiverve_randomjoke/apiverve_randomjoke.dart';
+
+void main() async {
+  final client = RandomjokeClient('YOUR_API_KEY');
+
+  try {
+    final response = await client.execute({
+      'safe': true
+    });
+
+    print('Status: ${response.status}');
+    print('Data: ${response.data}');
+  } catch (e) {
+    print('Error: $e');
+  }
+}
+```
+
+## Response
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "score": 9,
+    "setup": "Why did the stonemason break up with the female con artist?",
+    "punchline": "She took him for granite."
+  }
+}
+```
+
+## API Reference
+
+- **API Home:** [Random Joke API](https://apiverve.com/marketplace/randomjoke?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/randomjoke](https://docs.apiverve.com/ref/randomjoke?utm_source=dart&utm_medium=referral&utm_content=readme)
+
+## Authentication
+
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+---
+
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
